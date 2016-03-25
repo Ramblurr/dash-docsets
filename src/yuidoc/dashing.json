@@ -1,0 +1,14 @@
+{
+    "name": "YUIDoc Syntax Reference",
+    "package": "yuidoc",
+    "index": "../../src-docs/yuidoc//yui.github.io/yuidoc/syntax/index.html",
+    "selectors": {
+        "td > code": "Tag"
+    },
+    "ignore": [
+        "ABOUT"
+    ],
+    "icon32x32": "icon.png",
+    "allowJS": false,
+    "ExternalURL": "https://yui.github.io/yuidoc/syntax/"
+}

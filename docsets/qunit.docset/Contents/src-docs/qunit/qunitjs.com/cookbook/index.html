@@ -1,0 +1,1122 @@
+<!DOCTYPE html><!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]--><!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]--><!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="en-US"><!--<![endif]--><!-- Mirrored from qunitjs.com/cookbook/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Mar 2016 09:30:56 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>Cookbook | QUnit</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org"/>
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library"/>
+
+	<meta name="viewport" content="width=device-width"/>
+
+	<link rel="shortcut icon" href="http://qunitjs.com/jquery-wp-content/themes/qunitjs.com/i/favicon.ico"/>
+
+	<link rel="stylesheet" href="http://qunitjs.com/jquery-wp-content/themes/jquery/css/base.css?v=1"/>
+	<link rel="stylesheet" href="http://qunitjs.com/jquery-wp-content/themes/qunitjs.com/style.css"/>
+
+	<script src="http://qunitjs.com/jquery-wp-content/themes/jquery/js/modernizr.custom.2.8.3.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+	<script src="http://qunitjs.com/jquery-wp-content/themes/jquery/js/plugins.js"></script>
+	<script src="http://qunitjs.com/jquery-wp-content/themes/jquery/js/main.js"></script>
+
+	<script src="http://use.typekit.net/wde1aof.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/qunitjs.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),c.toDataURL().length>3e3):("simple"===a?d.fillText(String.fromCharCode(55357,56835),0,0):d.fillText(String.fromCharCode(55356,57135),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="https://api.w.org/" href="http://qunitjs.com/wp-json/"/>
+<meta name="generator" content="WordPress 4.4"/>
+<link rel="alternate" type="application/json+oembed" href="http://qunitjs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqunitjs.com%2Fcookbook%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="http://qunitjs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqunitjs.com%2Fcookbook%2F&amp;format=xml"/>
+
+</head>
+<body class="qunitjs page page-id-1 page-template-default page-slug-cookbook single-author singular">
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/CLA/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+																		</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="https://jquery.org/conduct/">Conduct</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="https://qunitjs.com/" title="QUnit">QUnit</a></h2>
+
+		<aside><div id="broadcast"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu">
+<li class="menu-item"><a href="http://qunitjs.com/">Home</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/intro/">Intro to Unit Testing</a></li>
+<li class="menu-item"><a href="../../api.qunitjs.com/index.html">API Documentation</a></li>
+<li class="menu-item"><a href="index.html">Cookbook</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/plugins/">Plugins</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/upgrade-guide-2.x/">2.x Upgrade Guide</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/about/">About</a></li>
+	</ul>
+</div>
+
+		<form method="get" class="searchform" action="http://qunitjs.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search QUnit</span>
+		<input type="text" name="s" value="" placeholder="Search"/>
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+
+<div class="content-full full-width">
+	<div id="content">
+					<h1 class="entry-title">Cookbook</h1>
+			<hr/>
+		
+		
+<div class="four columns">
+	<ul>
+		<li><a href="#introduction">Introduction</a></li>
+		<li><a href="#automating-unit-testing">Automating Unit Testing</a></li>
+		<li><a href="#asserting-results">Asserting Results</a></li>
+		<li><a href="#synchronous-callbacks">Synchronous Callbacks</a></li>
+		<li><a href="#asynchronous-callbacks">Asynchronous Callbacks</a></li>
+		<li><a href="#testing-user-actions">Testing User Actions</a></li>
+		<li><a href="#keeping-tests-atomic">Keeping Tests Atomic</a></li>
+		<li><a href="#grouping-tests">Grouping Tests</a></li>
+		<li><a href="#custom-assertions">Custom Assertions</a></li>
+		<li><a href="#efficient-development">Efficient Development</a></li>
+	</ul>
+</div>
+
+<div class="eight columns">
+	<a class="dashingAutolink" name="autolink-42"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Introduction"></a><h2 class="title" id="introduction">Introduction</h2>
+	<p>
+		Automated testing of software is an essential tool in development. Unit tests are the basic building blocks for automated tests: each component, the unit, of software is accompanied by a test that can be run by a test runner over and over again without any human interaction. In other words, you can write a test once and run it as often as necessary without any additional cost.
+	</p>
+	<p>
+		In addition to the benefits of good test coverage, testing can also drive the design of software, known as <em>test-driven design</em>, where a test is written before an implementation. You start writing a very simple test, verify that it fails (because the code to be tested doesn&#39;t exist yet), and then write the necessary implementation until the test passes. Once that happens, you extend the test to cover more of the desired functionality and implement again. By repeating those steps, the resulting code looks usually much different from what you&#39;d get by starting with the implementation.
+	</p>
+	<p>
+		Unit testing in JavaScript isn&#39;t much different from in other programming languages. You need a small framework that provides a test runner, as well as some utilities to write the actual tests.
+	</p>
+
+	<a class="dashingAutolink" name="autolink-43"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Automating%20Unit%20Testing"></a><h2 class="title" id="automating-unit-testing">Automating Unit Testing</h2>
+
+	<h3 class="title" id="problem-162">Problem</h3>
+	<p>
+		You want to automate testing your applications and frameworks, maybe even benefit from test-driven design. Writing your own testing framework may be tempting, but it involves a lot of work to cover all the details and special requirements of testing JavaScript code in various browsers.
+	</p>
+
+	<h3 class="title" id="solution-158">Solution</h3>
+	<p>
+		While there are other unit testing frameworks for JavaScript, you&#39;ve decided to check out QUnit. QUnit is jQuery&#39;s unit test framework and is used by a wide variety of projects.
+	</p>
+	<p>
+		To use QUnit, you only need to include two QUnit files on your HTML page. QUnit consists of <code class="literal">qunit.js</code>, the test runner and testing framework, and <code class="literal">qunit.css</code>, which styles the test suite page to display test results:
+	</p>
+	<div class="syntaxhighlighter xml">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+						<div class="line n16">16</div>
+					
+						<div class="line n17">17</div>
+					
+						<div class="line n18">18</div>
+					
+						<div class="line n19">19</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">&#34;utf-8&#34;</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">title</span>&gt;</span>QUnit basic example<span class="tag">&lt;/<span class="title">title</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">&#34;stylesheet&#34;</span> <span class="attribute">href</span>=<span class="value">&#34;https://code.jquery.com/qunit/qunit-1.22.0.css&#34;</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&#34;qunit&#34;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&#34;qunit-fixture&#34;</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">&#34;//code.jquery.com/qunit/qunit-1.22.0.js&#34;</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>    QUnit.test( <span class="string">&#34;a basic test example&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>      <span class="keyword">var</span> value = <span class="string">&#34;hello&#34;</span>;</code></div></div><div class="container"><div class="line"><code>      assert.equal( value, <span class="string">&#34;hello&#34;</span>, <span class="string">&#34;We expect value to be hello&#34;</span> );</code></div></div><div class="container"><div class="line"><code>    });</code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>Opening this file in a browser gives the result shown below:</p>
+	<p>
+		<iframe src="https://qunitjs.com/resources/example-cookbook-1-basics.html" style="width:100%;height:300px;border:0px"></iframe>
+	</p>
+	<p>
+		The only markup necessary in the <code class="literal">&lt;body&gt;</code> element is a <code class="literal">&lt;div&gt;</code> with <code class="literal">id=&#34;qunit-fixture&#34;</code>. This is required for all QUnit tests, even when the element itself is empty. This provides the fixture for tests, which will be explained in <a class="xref" href="#keeping-tests-atomic" title="Keeping Tests Atomic">the section called &#34;Keeping Tests Atomic&#34;</a>.
+	</p>
+	<p>
+		The interesting part is the <code>&lt;script&gt;</code> element following the <code>qunit.js</code> include. It consists of a call to the <code>test</code> function, with two arguments: the name of the test as a string, which is later used to display the test results, and a function. The function contains the actual testing code, which involves one or more assertions. The example uses one assertion, <code>equal()</code>, which is explained in detail in <a href="#asserting-results" title="Asserting Results">Asserting Results</a>.
+	</p>
+	<p>
+		Note that there is no <code class="literal">document-ready</code> block. The test runner handles that: calling <code class="literal">QUnit.test()</code> just adds the test to a queue, and its execution is deferred and controlled by the test runner.
+	</p>
+
+
+	<h3 class="title" id="discussion-id166">Discussion</h3>
+	<p>
+		The header of the test suite displays the page title, a green bar when all tests passed (a red bar when at least one test failed), a bar with a few checkboxes to filter test results and a blue bar with the <code class="literal">navigator.userAgent</code> string (handy for screenshots of test results in different browsers).
+	</p>
+	<p>
+		Of the checkboxes, &#34;Hide passed tests&#34; is useful when a lot of tests ran and only a few failed. Checking the checkbox will hide everything that passed, making it easier to focus on the tests that failed (see also <a class="xref" href="#efficient-development" title="Efficient Development">the Efficient Development</a> section below).
+	</p>
+	<p>
+		Checking &#34;Check for Globals&#34; causes QUnit to make a list of all properties on the <code>window</code> object, before and after each test, then checking for differences. If properties are added or removed, the test will fail, listing the difference. This helps to make sure your test code and code under test doesn&#39;t accidentally export any global properties.
+	</p>
+	<p>
+		The &#34;No try-catch&#34; checkbox tells QUnit to run your test outside of a try-catch block. When your test throws an exception, the testrunner will die, unable to continue running, but you&#39;ll get a &#34;native&#34; exception, which can help tremendously debugging old browsers with bad debugging support like Internet Explorer 6 (JavaScript sucks at rethrowing exceptions).
+	</p>
+	<p>
+		Below the header is a summary, showing the total time it took to run all tests as well as the overall number of total and failed assertions. While tests are still running, it will show which test is currently being executed.
+	</p>
+	<p>
+		The actual contents of the page are the test results. Each entry in the numbered list starts with the name of the test followed by, in parentheses, the number of failed, passed, and total assertions. Clicking the entry will show the results of each assertion, usually with details about expected and actual results. The &#34;Rerun&#34; link at the end will run that test on its own.
+	</p>
+
+	<a class="dashingAutolink" name="autolink-44"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Asserting%20Results"></a><h2 class="title" id="asserting-results">Asserting Results</h2>
+
+	<h3 class="title" id="problem-163">Problem</h3>
+	<p>
+		Essential elements of any unit test are assertions. The author of the test needs to express the results expected and have the unit testing framework compare them to the actual values that an implementation produces.
+	</p>
+
+	<h3 class="title" id="solution-159">Solution</h3>
+	<p>
+		QUnit provides a number of <a href="../../api.qunitjs.com/category/assert/index.html">built-in assertions</a>. Let&#39;s look at three of those:
+	</p>
+
+	<h4 class="title" id="ok-open-parenthesis-boolean-open-square">ok( truthy [, message ] )</h4>
+	<p>
+		The most basic one is <code class="literal">ok()</code>, which requires just one argument. If the argument evaluates to true, the assertion passes; otherwise, it fails. In addition, it accepts a string to display as a message in the test results:
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;ok test&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">true</span>, <span class="string">&#34;true succeeds&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="string">&#34;non-empty&#34;</span>, <span class="string">&#34;non-empty string succeeds&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">false</span>, <span class="string">&#34;false fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="number">0</span>, <span class="string">&#34;0 fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">NaN</span>, <span class="string">&#34;NaN fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="string">&#34;&#34;</span>, <span class="string">&#34;empty string fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">null</span>, <span class="string">&#34;null fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">undefined</span>, <span class="string">&#34;undefined fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<h4 class="title" id="equal-open-parenthesis-actual-comma-exp">equal( actual, expected [, message ] )</h4>
+	<p>
+		The <code class="literal">equal</code> assertion uses the simple comparison operator (<code class="literal">==</code>) to compare the actual and expected arguments. When they are equal, the assertion passes; otherwise, it fails. When it fails, both actual and expected values are displayed in the test result, in addition to a given message:
+	</p>
+
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;equal test&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.equal( <span class="number">0</span>, <span class="number">0</span>, <span class="string">&#34;Zero, Zero; equal succeeds&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( <span class="string">&#34;&#34;</span>, <span class="number">0</span>, <span class="string">&#34;Empty, Zero; equal succeeds&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( <span class="string">&#34;&#34;</span>, <span class="string">&#34;&#34;</span>, <span class="string">&#34;Empty, Empty; equal succeeds&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( <span class="number">0</span>, <span class="literal">false</span>, <span class="string">&#34;Zero, false; equal succeeds&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  assert.equal( <span class="string">&#34;three&#34;</span>, <span class="number">3</span>, <span class="string">&#34;Three, 3; equal fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( <span class="literal">null</span>, <span class="literal">false</span>, <span class="string">&#34;null, false; equal fails&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		Compared to <code class="literal">ok()</code>, <code class="literal">equal()</code> makes it much easier to debug tests that failed, because it&#39;s obvious which value caused the test to fail.
+	</p>
+	<p>
+		When you need a strict comparison (<code class="literal">===</code>), use <code class="literal">strictEqual()</code> instead.
+	</p>
+
+	<h4 class="title" id="deepEqual-open-parenthesis-actual-comma-expec">deepEqual( actual, expected [, message ] )</h4>
+	<p>
+		The <code class="literal">deepEqual()</code> assertion can be used just like <code class="literal">equal()</code> and is a better choice in most cases. Instead of the simple comparison operator (<code class="literal">==</code>), it uses the more accurate comparison operator (<code class="literal">===</code>). That way,
+		<code class="literal">undefined</code> doesn&#39;t equal <code class="literal">null</code>, <code class="literal">0</code>, or the empty string (<code class="literal">&#34;&#34;</code>). It also compares the content of objects so that <code class="literal">{key: value}</code> is equal to <code class="literal">{key: value}</code>, even when comparing two objects with distinct identities.</p><p><code class="literal">deepEqual()</code> also handles NaN, dates, regular expressions, arrays, and functions, while <code class="literal">equal()</code> would just check the object identity:
+	</p>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;deepEqual test&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> obj = { foo: <span class="string">&#34;bar&#34;</span> };</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  assert.deepEqual( obj, { foo: <span class="string">&#34;bar&#34;</span> }, <span class="string">&#34;Two objects can be the same in value&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		In case you want to explicitly not compare the content of two values, <code class="literal">equal()</code> can still be used. In general, <code class="literal">deepEqual()</code> is the better choice.
+	</p>
+
+
+	<a class="dashingAutolink" name="autolink-45"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Synchronous%20Callbacks"></a><h2 class="title" id="synchronous-callbacks">Synchronous Callbacks</h2>
+
+	<h3 class="title" id="problem-164">Problem</h3>
+	<p>
+		Occasionally, callback assertions in the code might not be called at all, causing the test to fail silently.
+	</p>
+	<h3 class="title" id="solution-160">Solution</h3>
+	<p>
+		QUnit provides a special assertion to define the number of assertions a test contains. If the test completes without the expected number of assertions, it will fail.
+	</p>
+	<p>
+		In order to indicate the expected number of assertion, call <code class="literal">assert.expect()</code> at the start of a test, with the number of expected assertions as the only argument:
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;a test&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.expect( <span class="number">2</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="function"><span class="keyword">function</span> <span class="title">calc</span><span class="params">( x, operation )</span> {</span></code></div></div><div class="container"><div class="line"><code>    <span class="keyword">return</span> operation( x );</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> result = calc( <span class="number">2</span>, <span class="keyword">function</span>( x ) {</code></div></div><div class="container"><div class="line"><code>    assert.ok( <span class="literal">true</span>, <span class="string">&#34;calc() calls operation function&#34;</span> );</code></div></div><div class="container"><div class="line"><code>    <span class="keyword">return</span> x * x;</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  assert.equal( result, <span class="number">4</span>, <span class="string">&#34;2 square equals 4&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<p>
+		Practical Example:
+	</p>
+
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;a test&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.expect( <span class="number">1</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> $body = $( <span class="string">&#34;body&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  $body.on( <span class="string">&#34;click&#34;</span>, <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    assert.ok( <span class="literal">true</span>, <span class="string">&#34;body was clicked!&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  $body.trigger( <span class="string">&#34;click&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<h3 class="title" id="discussion-id167">Discussion</h3>
+	<p>
+		<code class="literal">assert.expect()</code> provides the most value when actually testing callbacks. When all code is running in the scope of the test function,
+		<code class="literal">assert.expect()</code> provides no additional value&mdash;any error preventing assertions to run would cause the test to fail anyway, because the test runner catches the error and fails the unit.
+	</p>
+
+	<a class="dashingAutolink" name="autolink-46"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Asynchronous%20Callbacks"></a><h2 class="title" id="asynchronous-callbacks">Asynchronous Callbacks</h2>
+
+	<h3 class="title" id="problem-165">Problem</h3>
+	<p>
+		While <code class="literal">assert.expect()</code> is useful to test synchronous callbacks (see <a class="xref" href="#synchronous-callbacks" title="Synchronous Callbacks">the section called &#34;Synchronous Callbacks&#34;</a>), it can fall short for asynchronous callbacks. Asynchronous callbacks conflict with the way the test runner queues and executes tests. When code under test starts a timeout or interval or an AJAX request, the test runner will just continue running the rest of the test, as well as other tests following it, instead of waiting for the result of the asynchronous operation.
+	</p>
+	<h3 class="title" id="solution-161">Solution</h3>
+	<p>
+		For every asynchronous operation in your <code class="literal">QUnit.test()</code> callback, use <code class="literal">assert.async()</code>, which returns a &#34;done&#34; function that should be called when the operation has completed.
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;asynchronous test: async input focus&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> done = assert.async();</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> input = $( <span class="string">&#34;#test-input&#34;</span> ).focus();</code></div></div><div class="container"><div class="line"><code>  setTimeout(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    assert.equal( document.activeElement, input[<span class="number">0</span>], <span class="string">&#34;Input was focused&#34;</span> );</code></div></div><div class="container"><div class="line"><code>    done();</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<a class="dashingAutolink" name="autolink-47"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Testing%20User%20Actions"></a><h2 class="title" id="testing-user-actions">Testing User Actions</h2>
+
+	<h3 class="title" id="problem-166">Problem</h3>
+	<p>
+		Code that relies on actions initiated by the user can&#39;t be tested by just calling a function. Usually an anonymous function is bound to an element&#39;s event, e.g., a click, which has to be simulated.
+	</p>
+	<h3 class="title" id="solution-164">Solution</h3>
+	<p>
+		You can trigger the event using jQuery&#39;s <code class="literal">trigger()</code> method and test that the expected behavior occurred. If you don&#39;t want the native browser events to be triggered, you can use <code class="literal">triggerHandler()</code> to just execute the bound event handlers. This is useful when testing a click event on a link, where <code class="literal">trigger()</code> would cause the browser to change the location, which is hardly desired behavior in a test.
+	</p>
+	<p>
+		Let&#39;s assume we have a simple key logger that we want to test:
+	</p>
+
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="function"><span class="keyword">function</span> <span class="title">KeyLogger</span><span class="params">( target )</span> {</span></code></div></div><div class="container"><div class="line"><code>  <span class="keyword">this</span>.target = target;</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">this</span>.log = [];</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> that = <span class="keyword">this</span>;</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">this</span>.target.off( <span class="string">&#34;keydown&#34;</span> ).on( <span class="string">&#34;keydown&#34;</span>, <span class="keyword">function</span>( event ) {</code></div></div><div class="container"><div class="line"><code>    that.log.push( event.keyCode );</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		We can manually trigger a keypress event to see whether the
+		logger is working:
+	</p>
+
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;keylogger api behavior&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> doc = $( document ),</code></div></div><div class="container"><div class="line"><code>    keys = <span class="keyword">new</span> KeyLogger( doc );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="comment">// Trigger the key event</span></code></div></div><div class="container"><div class="line"><code>  doc.trigger( $.Event( <span class="string">&#34;keydown&#34;</span>, { keyCode: <span class="number">9</span> } ) );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="comment">// Verify expected behavior</span></code></div></div><div class="container"><div class="line"><code>  assert.deepEqual( keys.log, [ <span class="number">9</span> ], <span class="string">&#34;correct key was logged&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<h3 class="title" id="discussion-id169">Discussion</h3>
+	<p>
+		If your event handler doesn&#39;t rely on any specific properties of the event, you can just call <code class="literal">.trigger( eventType )</code>. However, if your event handler does rely on specific properties of the event, you will need to create an event object using <code class="literal">$.Event</code> with the necessary properties, as shown previously.</p><p>It&#39;s also important to trigger all relevant events for complex behaviors such as dragging, which is comprised of mousedown, at least one mousemove, and a mouseup. Keep in mind that even some events that seem simple are actually compound; e.g., a click is really a mousedown, mouseup, and then click. Whether you actually need to trigger all three of these depends on the code under test. Triggering a click works for most cases.
+	</p>
+	<p>
+		If thats not enough, you have a few framework options that help simulating user events:
+	</p>
+	<ul>
+		<li><a href="https://github.com/bitovi/syn">syn</a> &#34;is a synthetic event library that pretty much handles typing, clicking, moving, and dragging exactly how a real user would perform those actions&#34;. Used by FuncUnit, which is based on QUnit, for functional testing of web applications.</li>
+		<li><a href="https://github.com/ephox/JSRobot">JSRobot</a> - &#34;A testing utility for web-apps that can generate real keystrokes rather than simply simulating the JavaScript event firing. This allows the keystroke to trigger the built-in browser behaviour which isn&#39;t otherwise possible.&#34;</li>
+		<li><a href="https://dojotoolkit.org/reference-guide/1.10/util/dohrobot.html">DOH Robot</a> &#34;provides an API that enables testers to automate their UI tests using real, cross-platform, system-level input events&#34;. This gets you the closest to &#34;real&#34; browser events, but uses Java applets for that.</li>
+		<li><a href="https://github.com/gtramontina/keyvent.js">keyvent.js</a> - &#34;Keyboard events simulator.&#34;</li>
+	</ul>
+
+	<a class="dashingAutolink" name="autolink-48"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Keeping%20Tests%20Atomic"></a><h2 class="title" id="keeping-tests-atomic">Keeping Tests Atomic</h2>
+
+	<h3 class="title" id="problem-167">Problem</h3>
+	<p>
+		When tests are lumped together, it&#39;s possible to have tests that should pass but fail or tests that should fail but pass. This is a result of a test having invalid results because of side effects of a previous test:
+	</p>
+
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;2 asserts&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> fixture = $( <span class="string">&#34;#qunit-fixture&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  fixture.append( <span class="string">&#34;&lt;div&gt;hello!&lt;/div&gt;&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( $( <span class="string">&#34;div&#34;</span>, fixture ).length, <span class="number">1</span>, <span class="string">&#34;div added successfully!&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  fixture.append( <span class="string">&#34;&lt;span&gt;hello!&lt;/span&gt;&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( $( <span class="string">&#34;span&#34;</span>, fixture ).length, <span class="number">1</span>, <span class="string">&#34;span added successfully!&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<p>
+		The first <code class="literal">append()</code> adds a <code class="literal">&lt;div&gt;</code> that the second <code>equal()</code> doesn&#39;t take into account.
+	</p>
+
+	<h3 class="title" id="solution-165">Solution</h3>
+	<p>
+		Use the <code class="literal">QUnit.test()</code> method to keep tests atomic, being careful to keep each assertion clean of any possible side effects. You should only rely on the fixture markup, inside the <code class="literal">#qunit-fixture</code> element. Modifying and relying on anything else can have side effects:
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;Appends a div&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> fixture = $( <span class="string">&#34;#qunit-fixture&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  fixture.append( <span class="string">&#34;&lt;div&gt;hello!&lt;/div&gt;&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( $( <span class="string">&#34;div&#34;</span>, fixture ).length, <span class="number">1</span>, <span class="string">&#34;div added successfully!&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;Appends a span&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> fixture = $( <span class="string">&#34;#qunit-fixture&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  fixture.append(<span class="string">&#34;&lt;span&gt;hello!&lt;/span&gt;&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.equal( $( <span class="string">&#34;span&#34;</span>, fixture ).length, <span class="number">1</span>, <span class="string">&#34;span added successfully!&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		QUnit will reset the elements inside the <code class="literal">#qunit-fixture</code> element after each test, removing any events that may have existed. As long as you use elements only within this fixture, you don&#39;t have to manually clean up after your tests to keep them atomic.
+	</p>
+
+	<h3 class="title" id="discussion-id170">Discussion</h3>
+	<p>
+		In addition to the <code class="literal">#qunit-fixture</code> fixture element and the filters explained in <a class="xref" href="#efficient-development" title="Efficient Development">the section called &#34;Efficient Development&#34;</a>, QUnit also offers a <code class="literal">?noglobals</code> flag. Consider the following test:
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;global pollution&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  window.pollute = <span class="literal">true</span>;</code></div></div><div class="container"><div class="line"><code>  assert.ok( pollute, <span class="string">&#34;nasty pollution&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		In a normal test run, this passes as a valid result. Running the <code>ok()</code> test with the <a href="https://qunitjs.com/resources/example-cookbook-noglobals.html?noglobals" target="_top">noglobals flag</a> will cause the test to fail, because QUnit detected that it polluted the window object.
+	</p>
+	<p>
+		There is no need to use this flag all the time, but it can be handy to detect global namespace pollution that may be problematic in combination with third-party libraries. And it helps to detect bugs in tests caused by side effects.
+	</p>
+
+	<a class="dashingAutolink" name="autolink-49"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Grouping%20Tests"></a><h2 class="title" id="grouping-tests">Grouping Tests</h2>
+
+	<h3 class="title" id="problem-168">Problem</h3>
+	<p>
+		You&#39;ve split up all of your tests to keep them atomic and free of side effects, but you want to keep them logically organized and be able to run a specific group of tests on their own.
+	</p>
+
+	<h3 class="title" id="solution-166">Solution</h3>
+	<p>
+		You can use the <code class="literal">QUnit.module()</code> function to group tests together:
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.module( <span class="string">&#34;group a&#34;</span> );</code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;a basic test example&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">true</span>, <span class="string">&#34;this test is fine&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;a basic test example 2&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">true</span>, <span class="string">&#34;this test is fine&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>QUnit.module( <span class="string">&#34;group b&#34;</span> );</code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;a basic test example 3&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">true</span>, <span class="string">&#34;this test is fine&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;a basic test example 4&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  assert.ok( <span class="literal">true</span>, <span class="string">&#34;this test is fine&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		All tests that occur after a call to <code class="literal">QUnit.module()</code> will be grouped into that module. The test names will all be preceded by the module name in the test results. You can then use that module name to select tests to run (see <a class="xref" href="#efficient-development" title="Efficient Development">the section called &#34;Efficient Development&#34;</a>).
+	</p>
+
+	<h3 class="title" id="discussion-id171">Discussion</h3>
+	<p>
+		In addition to grouping tests, <code class="literal">QUnit.module()</code> can be used to extract common code from tests within that module. The <code class="literal">QUnit.module()</code> function takes an optional second parameter to define functions to run before and after each test within the module:
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.module( <span class="string">&#34;module&#34;</span>, {</code></div></div><div class="container"><div class="line"><code>  beforeEach: <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>    assert.ok( <span class="literal">true</span>, <span class="string">&#34;one extra assert per test&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  }, afterEach: <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>    assert.ok( <span class="literal">true</span>, <span class="string">&#34;and one extra assert after each test&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;test with beforeEach and afterEach&#34;</span>, <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>  assert.expect( <span class="number">2</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+	<p>
+		You can specify both beforeEach and afterEach properties together, or just one of them.
+	</p>
+	<p>
+		Calling <code class="literal">QUnit.module()</code> again without the additional argument will simply reset any beforeEach/afterEach functions defined by another module previously.
+	</p>
+
+	<a class="dashingAutolink" name="autolink-50"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Custom%20Assertions"></a><h2 class="title" id="custom-assertions">Custom Assertions</h2>
+
+	<h3 class="title" id="problem-170">Problem</h3>
+	<p>
+		You have several tests that duplicate logic for asserting some expectation. This repetitive code lessens the readability of your tests and increases the surface for bugs.
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.test( <span class="string">&#34;retrieving object keys&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> objectKeys = keys( { a: <span class="number">1</span>, b: <span class="number">2</span> } );</code></div></div><div class="container"><div class="line"><code>  assert.ok( objectKeys.indexOf(<span class="string">&#34;a&#34;</span>) &gt; -<span class="number">1</span>, <span class="string">&#34;Object keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( objectKeys.indexOf(<span class="string">&#34;b&#34;</span>) &gt; -<span class="number">1</span>, <span class="string">&#34;Object keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> arrayKeys = keys( [<span class="number">1</span>, <span class="number">2</span>] );</code></div></div><div class="container"><div class="line"><code>  assert.ok( arrayKeys.indexOf(<span class="string">&#34;1&#34;</span>) &gt; -<span class="number">1</span>, <span class="string">&#34;Array keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.ok( arrayKeys.indexOf(<span class="string">&#34;2&#34;</span>) &gt; -<span class="number">1</span>, <span class="string">&#34;Array keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<h3 class="title" id="solution-168">Solution</h3>
+	<p>
+		Define a function to encapsulate the expectation in a reusable unit. Invoke <code><a href="../../api.qunitjs.com/push/index.html">this.push</a><a></a></code> within the body to notify QUnit that an assertion has taken place.
+	</p>
+	<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.assert.contains = <span class="keyword">function</span>( needle, haystack, message ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> actual = haystack.indexOf(needle) &gt; -<span class="number">1</span>;</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">this</span>.push(actual, actual, needle, message);</code></div></div><div class="container"><div class="line"><code>};</code></div></div><div class="container"><div class="line"><code>QUnit.test(<span class="string">&#34;retrieving object keys&#34;</span>, <span class="keyword">function</span>( assert ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> objectKeys = keys( { a: <span class="number">1</span>, b: <span class="number">2</span> } );</code></div></div><div class="container"><div class="line"><code>  assert.contains( <span class="string">&#34;a&#34;</span>, objectKeys, <span class="string">&#34;Object keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.contains( <span class="string">&#34;b&#34;</span>, objectKeys, <span class="string">&#34;Object keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> arrayKeys = keys( [<span class="number">1</span>, <span class="number">2</span>] );</code></div></div><div class="container"><div class="line"><code>  assert.contains( <span class="string">&#34;1&#34;</span>, arrayKeys, <span class="string">&#34;Array keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code>  assert.contains( <span class="string">&#34;2&#34;</span>, arrayKeys, <span class="string">&#34;Array keys&#34;</span> );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+	<h3 class="title" id="dicussion-id173">Discussion</h3>
+	<p>
+		Custom assertions can help make test suites more readable and more maintainable. At a minimum, they are simply functions that invoke <code><a href="../../api.qunitjs.com/push/index.html">this.push</a></code> with a Boolean value--this is how QUnit detects that an assertion has taken place and the result of that assertion.
+	</p>
+	<p>
+		It is a good practice to define this function as a method on the global <code><a href="../../api.qunitjs.com/QUnit.assert/index.html">QUnit.assert</a></code> object. This helps communicate the purpose of the function to other developers. You may accomplish this by directly assigning a new property on the object (i.e. <code>QUnit.assert.myAssertion = myAssertion;</code>) or using <code><a href="../../api.qunitjs.com/QUnit.extend/index.html">QUnit.extend</a></code> (i.e. <code>QUnit.extend(QUnit.assert, { myAssertion: myAssertion });</code>).
+	</p>
+
+	<a class="dashingAutolink" name="autolink-51"></a><a class="dashAnchor" name="//apple_ref/cpp/Guide/Efficient%20Development"></a><h2 class="title" id="efficient-development">Efficient Development</h2>
+
+	<h3 class="title" id="problem-169">Problem</h3>
+	<p>
+		Once your testsuite takes longer than a few seconds to run, you want to avoid wasting a lot of time just waiting for test results to come in.
+	</p>
+	<h3 class="title" id="solution-167">Solution</h3>
+	<p>
+		QUnit has a bunch of features built in to make up for that. The most interesting ones require just a single click to activate. Toggle the &#34;Hide passed tests&#34; checkbox at the top, and QUnit will only show you tests that failed. That alone doesn&#39;t make a difference in speed, but already helps focusing on failing tests.
+	</p>
+	<p>
+		It gets more interesting if you take another QUnit feature into account, which is enabled by default and usually not noticable. Whenever a test fails, QUnit stores the name of that test in <code>sessionStorage</code>. The next time you run a testsuite, that failing test will run before all other tests. The output order isn&#39;t affected, only the execution order. In combination with the &#34;Hide passed tests&#34; checkbox you will then get to see the failing test, if it still fails, at the top, as soon as possible.
+	</p>
+
+	<h3 class="title" id="discussion-id172">Discussion</h3>
+	<p>
+		The automatic reordering happens by default. It implies that your tests need to be atomic, <a href="#">as discussed previously</a>. If your tests aren&#39;t, you&#39;ll see random non-deterministic errors. Fixing that is usually the right approach. If you&#39;re really desperate, you can set <code><a href="../../api.qunitjs.com/QUnit.config/index.html">QUnit.config</a>.reorder = false</code>.
+	</p>
+	<p>
+		In addition to the automatic reordering, there are a few manual options available. You can rerun any test by clicking the &#34;Rerun&#34; link next to that test. That will add a &#34;testNumber=N&#34; parameter to the query string, where &#34;N&#34; is the number of the test you clicked. You can then reload the page to keep running just that test, or use the browser&#39;s back button to go back to running all tests.
+	</p>
+	<p>
+		Running all tests within a module works pretty much the same way, except that you choose the module to run using the select at the top right. It&#39;ll set a &#34;module=N&#34; query string, where &#34;N&#34; is the encoded name of the module, for example &#34;?module=testEnvironment%20with%20object&#34;.
+	</p>
+	<p>
+		<em>*This page was first published, under a non-exclusive license, as a chapter in the jQuery Cookbook, authored by Scott Gonz&aacute;lez and J&ouml;rn Zaefferer. As QUnit changed since the book was printed, this version is more up-to-date.</em>
+	</p>
+</div>	</div>
+</div>
+
+	</div>
+</div>
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<li>
+						<a href="https://www.packtpub.com/application-development/instant-testing-qunit-instant">
+							<img src="http://qunitjs.com/jquery-wp-content/themes/jquery/content/books/qunit-instant-testing.jpg" alt="Instant Testing with QUnit" width="91" height="114"/>
+							<span class="book-title">Instant Testing with QUnit</span>
+							<cite>Dmitry Sheiko</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://shop.oreilly.com/product/0636920024699.do">
+							<img src="http://qunitjs.com/jquery-wp-content/themes/jquery/content/books/qunit-testable-javascript.gif" alt="Testable JavaScript" width="91" height="114"/>
+							<span class="book-title">Testable JavaScript</span>
+							<cite>Mark Ethan Trostler</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://tddjs.com/">
+							<img src="http://qunitjs.com/jquery-wp-content/themes/jquery/content/books/qunit-tddjs.png" alt="Test-Driven JavaScript Development" width="91" height="114"/>
+							<span class="book-title">Test-Driven JavaScript Development</span>
+							<cite>Christian Johansen</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/qunit-and-testing/">Forum</a></li>
+			<li><a class="icon-wrench" href="../../api.qunitjs.com/index.html">API</a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/qunitjs">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2016 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://mediatemple.net/" rel="nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com/" rel="nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'qunitjs.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script type="text/javascript" src="http://qunitjs.com/wp-includes/js/comment-reply.min.js?ver=4.4"></script>
+<script type="text/javascript" src="http://qunitjs.com/wp-includes/js/wp-embed.min.js?ver=4.4"></script>
+
+
+
+
+
+</body><!-- Mirrored from qunitjs.com/cookbook/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Mar 2016 09:30:56 GMT --></html>

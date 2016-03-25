@@ -1,0 +1,103 @@
+HTTrack3.48-21 launched on Fri, 25 Mar 2016 10:30:49 at https://api.qunitjs.com/ https://qunitjs.com/cookbook/
+(httrack https://api.qunitjs.com/ https://qunitjs.com/cookbook/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:30:58	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/ (from https://api.qunitjs.com/)
+10:30:58	Warning: 	HTML file (16348 bytes) retransferred due to lack of cache: https://api.qunitjs.com/push/
+10:30:58	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fapi.qunitjs.com%2F (from https://api.qunitjs.com/)
+10:30:58	Warning: 	HTML file (13924 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.assert/
+10:30:58	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fapi.qunitjs.com%2F&format=xml (from https://api.qunitjs.com/)
+10:30:58	Warning: 	HTML file (16818 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.extend/
+10:30:59	Warning: 	HTML file (25175 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.config/
+10:31:03	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/push/ (from https://qunitjs.com/cookbook/)
+10:31:03	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/QUnit.assert/ (from https://qunitjs.com/cookbook/)
+10:31:03	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/QUnit.extend/ (from https://qunitjs.com/cookbook/)
+10:31:03	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/QUnit.config/ (from https://qunitjs.com/cookbook/)
+10:31:06	Error: 	"Not Found" (404) at link api.qunitjs.com/jquery-wp-content/themes/jquery/images-foundation/gauze.png (from api.qunitjs.com/jquery-wp-content/themes/jquery/css/base.css?v=1)
+10:31:23	Warning: 	HTML file (16348 bytes) retransferred due to lack of cache: https://api.qunitjs.com/push/
+10:31:23	Warning: 	HTML file (13924 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.assert/
+10:31:23	Warning: 	HTML file (16818 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.extend/
+10:31:25	Warning: 	HTML file (25175 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.config/
+10:31:58	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/push/ (from https://qunitjs.com/cookbook/)
+10:31:58	Warning: 	HTML file (16348 bytes) retransferred due to lack of cache: https://api.qunitjs.com/push/
+10:31:58	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/QUnit.assert/ (from https://qunitjs.com/cookbook/)
+10:31:58	Warning: 	HTML file (13924 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.assert/
+10:31:58	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/QUnit.extend/ (from https://qunitjs.com/cookbook/)
+10:31:58	Warning: 	HTML file (16818 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.extend/
+10:31:58	Warning: 	Retry after error -4 (Interrupted transfer) at link https://api.qunitjs.com/QUnit.config/ (from https://qunitjs.com/cookbook/)
+10:31:58	Warning: 	HTML file (25175 bytes) retransferred due to lack of cache: https://api.qunitjs.com/QUnit.config/
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fasync%2F (from api.qunitjs.com/async/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fasync%2F&format=xml (from api.qunitjs.com/async/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FdeepEqual%2F (from api.qunitjs.com/deepEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FdeepEqual%2F&format=xml (from api.qunitjs.com/deepEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fequal%2F (from api.qunitjs.com/equal/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fequal%2F&format=xml (from api.qunitjs.com/equal/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fexpect%2F (from api.qunitjs.com/expect/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fexpect%2F&format=xml (from api.qunitjs.com/expect/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotDeepEqual%2F (from api.qunitjs.com/notDeepEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotDeepEqual%2F&format=xml (from api.qunitjs.com/notDeepEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotEqual%2F (from api.qunitjs.com/notEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotEqual%2F&format=xml (from api.qunitjs.com/notEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotOk%2F (from api.qunitjs.com/notOk/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotOk%2F&format=xml (from api.qunitjs.com/notOk/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotPropEqual%2F (from api.qunitjs.com/notPropEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotPropEqual%2F&format=xml (from api.qunitjs.com/notPropEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotStrictEqual%2F (from api.qunitjs.com/notStrictEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FnotStrictEqual%2F&format=xml (from api.qunitjs.com/notStrictEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fok%2F (from api.qunitjs.com/ok/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fok%2F&format=xml (from api.qunitjs.com/ok/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FpropEqual%2F (from api.qunitjs.com/propEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FpropEqual%2F&format=xml (from api.qunitjs.com/propEqual/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.asyncTest%2F (from api.qunitjs.com/QUnit.asyncTest/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.asyncTest%2F&format=xml (from api.qunitjs.com/QUnit.asyncTest/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.begin%2F (from api.qunitjs.com/QUnit.begin/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.begin%2F&format=xml (from api.qunitjs.com/QUnit.begin/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.done%2F (from api.qunitjs.com/QUnit.done/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.done%2F&format=xml (from api.qunitjs.com/QUnit.done/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.dump.parse%2F (from api.qunitjs.com/QUnit.dump.parse/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.dump.parse%2F&format=xml (from api.qunitjs.com/QUnit.dump.parse/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.init%2F (from api.qunitjs.com/QUnit.init/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.init%2F&format=xml (from api.qunitjs.com/QUnit.init/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.log%2F (from api.qunitjs.com/QUnit.log/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.log%2F&format=xml (from api.qunitjs.com/QUnit.log/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.module%2F (from api.qunitjs.com/QUnit.module/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.module%2F&format=xml (from api.qunitjs.com/QUnit.module/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.moduleDone%2F (from api.qunitjs.com/QUnit.moduleDone/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.moduleDone%2F&format=xml (from api.qunitjs.com/QUnit.moduleDone/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.moduleStart%2F (from api.qunitjs.com/QUnit.moduleStart/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.moduleStart%2F&format=xml (from api.qunitjs.com/QUnit.moduleStart/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.only%2F (from api.qunitjs.com/QUnit.only/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.only%2F&format=xml (from api.qunitjs.com/QUnit.only/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.push%2F (from api.qunitjs.com/QUnit.push/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.push%2F&format=xml (from api.qunitjs.com/QUnit.push/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.reset%2F (from api.qunitjs.com/QUnit.reset/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.reset%2F&format=xml (from api.qunitjs.com/QUnit.reset/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.skip%2F (from api.qunitjs.com/QUnit.skip/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.skip%2F&format=xml (from api.qunitjs.com/QUnit.skip/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.stack%2F (from api.qunitjs.com/QUnit.stack/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.stack%2F&format=xml (from api.qunitjs.com/QUnit.stack/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.start%2F (from api.qunitjs.com/QUnit.start/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.start%2F&format=xml (from api.qunitjs.com/QUnit.start/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.stop%2F (from api.qunitjs.com/QUnit.stop/)
+10:32:00	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.stop%2F&format=xml (from api.qunitjs.com/QUnit.stop/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.test%2F (from api.qunitjs.com/QUnit.test/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.test%2F&format=xml (from api.qunitjs.com/QUnit.test/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.testDone%2F (from api.qunitjs.com/QUnit.testDone/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.testDone%2F&format=xml (from api.qunitjs.com/QUnit.testDone/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.testStart%2F (from api.qunitjs.com/QUnit.testStart/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.testStart%2F&format=xml (from api.qunitjs.com/QUnit.testStart/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FstrictEqual%2F (from api.qunitjs.com/strictEqual/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2FstrictEqual%2F&format=xml (from api.qunitjs.com/strictEqual/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fthrows%2F (from api.qunitjs.com/throws/)
+10:32:01	Error: 	"Not Found" (404) at link api.qunitjs.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fapi.qunitjs.com%2Fthrows%2F&format=xml (from api.qunitjs.com/throws/)
+10:32:01	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://api.qunitjs.com/push/ (from https://qunitjs.com/cookbook/)
+10:32:01	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://api.qunitjs.com/QUnit.assert/ (from https://qunitjs.com/cookbook/)
+10:32:01	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://api.qunitjs.com/QUnit.extend/ (from https://qunitjs.com/cookbook/)
+10:32:01	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://api.qunitjs.com/QUnit.config/ (from https://qunitjs.com/cookbook/)
+
+HTTrack Website Copier/3.48-21 mirror complete in 1 minutes 12 seconds : 168 links scanned, 85 files written (1289683 bytes overall), 40 files updated [718176 bytes received at 9974 bytes/sec], 1432160 bytes transferred using HTTP compression in 111 files, ratio 30%, 6.0 requests per connection
+(72 errors, 20 warnings, 0 messages)

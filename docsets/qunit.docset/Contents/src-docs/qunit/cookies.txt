@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.qunitjs.com	TRUE	/	FALSE	1999999999	__cfduid	db71250bca229a412aeb0146ef1945a551458898249
+

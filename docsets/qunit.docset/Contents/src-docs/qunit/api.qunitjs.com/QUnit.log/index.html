@@ -1,0 +1,386 @@
+<!DOCTYPE html><!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]--><!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]--><!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="en-US"><!--<![endif]--><!-- Mirrored from api.qunitjs.com/QUnit.log/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Mar 2016 09:31:38 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
+
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>QUnit.log() | QUnit API Documentation</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org"/>
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library"/>
+
+	<meta name="viewport" content="width=device-width"/>
+
+	<link rel="shortcut icon" href="../jquery-wp-content/themes/api.qunitjs.com/i/favicon.ico"/>
+
+	<link rel="stylesheet" href="../jquery-wp-content/themes/jquery/css/base3860.css?v=1"/>
+	<link rel="stylesheet" href="../jquery-wp-content/themes/api.qunitjs.com/style.css"/>
+
+	<script src="../jquery-wp-content/themes/jquery/js/modernizr.custom.2.8.3.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+	<script src="../jquery-wp-content/themes/jquery/js/plugins.js"></script>
+	<script src="../jquery-wp-content/themes/jquery/js/main.js"></script>
+
+	<script src="http://use.typekit.net/wde1aof.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/api.qunitjs.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),c.toDataURL().length>3e3):("simple"===a?d.fillText(String.fromCharCode(55357,56835),0,0):d.fillText(String.fromCharCode(55356,57135),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="https://api.w.org/" href="../wp-json/index.html"/>
+<meta name="generator" content="WordPress 4.4"/>
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embedaca0.html?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.log%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed0842.html?url=http%3A%2F%2Fapi.qunitjs.com%2FQUnit.log%2F&amp;format=xml"/>
+
+</head>
+<body class="api qunitjs single single-post postid-19 single-format-standard single-author singular">
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/CLA/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+																		</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="https://jquery.org/conduct/">Conduct</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="http://qunitjs.com/" title="QUnit API Documentation">QUnit API Documentation</a></h2>
+
+		<aside><div id="broadcast"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu">
+<li class="menu-item"><a href="http://qunitjs.com/">Home</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/intro/">Intro to Unit Testing</a></li>
+<li class="menu-item current"><a href="../index.html">API Documentation</a></li>
+<li class="menu-item"><a href="../../qunitjs.com/cookbook/index.html">Cookbook</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/plugins/">Plugins</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/upgrade-guide-2.x/">2.x Upgrade Guide</a></li>
+<li class="menu-item"><a href="http://qunitjs.com/about/">About</a></li>
+	</ul>
+</div>
+
+		<form method="get" class="searchform" action="http://api.qunitjs.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search QUnit API Documentation</span>
+		<input type="text" name="s" value="" placeholder="Search"/>
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+<div class="content-right twelve columns">
+	<div id="content">
+					
+<article id="post-19" class="post-19 post type-post status-publish format-standard hentry category-callbacks">
+	<header class="entry-header">
+		<a class="dashingAutolink" name="autolink-8"></a><a class="dashAnchor" name="//apple_ref/cpp/Function/QUnit.log"></a><h1 class="entry-title">QUnit.log()</h1>
+		<hr/>
+				<div class="entry-meta">
+			Categories: <span class="category"><a href="../category/callbacks/index.html">Callbacks</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<article id="QUnit-log1" class="entry method"><h2 class="section-title"><span class="name">QUnit.log( callback )</span></h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>Description: </strong>Register a callback to fire whenever an assertion completes.</p>
+<ul class="signatures"><li class="signature">
+<h4 class="name"><a id="QUnit-log-callback" href="#QUnit-log-callback"><span class="icon-link"></span>QUnit.log( callback )</a></h4>
+<ul><li>
+<div><strong>callback</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Function">Function</a>( <a href="http://api.jquery.com/Types/#Object">Object</a> details )</div>
+<div>Callback to execute. Provides a single argument with the following properties:</div>
+<ul>
+<li>
+<div><strong>result</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Boolean">Boolean</a>
+</div>
+<div>The boolean result of an assertion, <code>true</code> means passed, <code>false</code> means failed.</div>
+</li>
+<li>
+<div><strong>actual</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>One side of a comparision assertion. Can be undefined when <code>ok()</code> is used.</div>
+</li>
+<li>
+<div><strong>expected</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Object">Object</a>
+</div>
+<div>One side of a comparision assertion. Can be undefined when <code>ok()</code> is used.</div>
+</li>
+<li>
+<div><strong>message</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>A string description provided by the assertion.</div>
+</li>
+<li>
+<div><strong>source</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The associated stacktrace, either from an exception or pointing to the source of the assertion. Depends on browser support for providing stacktraces, so can be undefined.</div>
+</li>
+<li>
+<div><strong>module</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The test module name of the assertion. If the assertion is not connected to any module, the property&#39;s value will be <code>undefined</code>.</div>
+</li>
+<li>
+<div><strong>name</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#String">String</a>
+</div>
+<div>The test block name of the assertion.</div>
+</li>
+<li>
+<div><strong>runtime</strong></div>
+<div>Type: <a href="http://api.jquery.com/Types/#Number">Number</a>
+</div>
+<div>The time elapsed in milliseconds since the start of the containing <code><a href="../QUnit.test/index.html">QUnit.test()</a></code>, including setup.</div>
+</li>
+</ul>
+</li></ul>
+</li></ul>
+<div class="longdesc" id="entry-longdesc">
+		This is one of several callbacks QUnit provides. Its intended for integration scenarios like PhantomJS or Jenkins.
+		<p>The properties of the details argument are listed below as options.</p>
+	</div>
+<section class="entry-examples" id="entry-examples"><header><h2>Examples:</h2></header><div class="entry-example" id="example-0">
+<p>Register a callback that logs the assertion result and its message</p>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.log(<span class="keyword">function</span>( details ) {</code></div></div><div class="container"><div class="line"><code>  console.log( <span class="string">&#34;Log: &#34;</span>, details.result, details.message );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div>
+<div class="entry-example" id="example-1">
+<p>Logs the module and test block whenever an assertion fails.</p>
+<div class="syntaxhighlighter javascript">
+	<table>
+		<tbody>
+			<tr>
+				
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+						<div class="line n10">10</div>
+					
+						<div class="line n11">11</div>
+					
+						<div class="line n12">12</div>
+					
+						<div class="line n13">13</div>
+					
+						<div class="line n14">14</div>
+					
+						<div class="line n15">15</div>
+					
+				</td>
+				
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>QUnit.log(<span class="keyword">function</span>( details ) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">if</span> ( details.result ) {</code></div></div><div class="container"><div class="line"><code>    <span class="keyword">return</span>;</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> loc = details.module + <span class="string">&#34;: &#34;</span> + details.name + <span class="string">&#34;: &#34;</span>,</code></div></div><div class="container"><div class="line"><code>    output = <span class="string">&#34;FAILED: &#34;</span> + loc + ( details.message ? details.message + <span class="string">&#34;, &#34;</span> : <span class="string">&#34;&#34;</span> );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">if</span> ( details.actual ) {</code></div></div><div class="container"><div class="line"><code>    output += <span class="string">&#34;expected: &#34;</span> + details.expected + <span class="string">&#34;, actual: &#34;</span> + details.actual;</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">if</span> ( details.source ) {</code></div></div><div class="container"><div class="line"><code>    output += <span class="string">&#34;, &#34;</span> + details.source;</code></div></div><div class="container"><div class="line"><code>  }</code></div></div><div class="container"><div class="line"><code>  console.log( output );</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</div></section>
+</div></article>	</div><!-- .entry-content -->
+
+</article><!-- #post-19 -->
+			</div>
+
+	<div id="sidebar" class="widget-area" role="complementary">
+	<aside id="categories" class="widget">
+		<ul>
+				<li class="cat-item cat-item-3"><a href="../category/assert/index.html">Assert</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="../category/async-control/index.html">Async Control</a>
+</li>
+	<li class="cat-item cat-item-4 current-cat"><a href="../category/callbacks/index.html">Callbacks</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="../category/config/index.html">Configuration and Utilities</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="../category/test/index.html">Test</a>
+</li>
+		</ul>
+	</aside>
+</div>
+</div>
+	</div>
+</div>
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<li>
+						<a href="https://www.packtpub.com/application-development/instant-testing-qunit-instant">
+							<img src="../jquery-wp-content/themes/jquery/content/books/qunit-instant-testing.jpg" alt="Instant Testing with QUnit" width="91" height="114"/>
+							<span class="book-title">Instant Testing with QUnit</span>
+							<cite>Dmitry Sheiko</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://shop.oreilly.com/product/0636920024699.do">
+							<img src="../jquery-wp-content/themes/jquery/content/books/qunit-testable-javascript.gif" alt="Testable JavaScript" width="91" height="114"/>
+							<span class="book-title">Testable JavaScript</span>
+							<cite>Mark Ethan Trostler</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://tddjs.com/">
+							<img src="../jquery-wp-content/themes/jquery/content/books/qunit-tddjs.png" alt="Test-Driven JavaScript Development" width="91" height="114"/>
+							<span class="book-title">Test-Driven JavaScript Development</span>
+							<cite>Christian Johansen</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/qunit-and-testing/">Forum</a></li>
+			<li><a class="icon-wrench" href="../index.html">API</a></li>
+			<li><a class="icon-twitter" href="https://twitter.com/qunitjs">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2016 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://mediatemple.net/" rel="nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com/" rel="nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'api.qunitjs.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script type="text/javascript" src="../wp-includes/js/comment-reply.mineb11.js?ver=4.4"></script>
+<script type="text/javascript" src="../wp-includes/js/wp-embed.mineb11.js?ver=4.4"></script>
+
+
+
+
+
+</body><!-- Mirrored from api.qunitjs.com/QUnit.log/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Mar 2016 09:31:40 GMT --></html>
