@@ -1,0 +1,21 @@
+{
+    "name": "systemd",
+    "package": "systemd",
+    "index": "systemd.index.html",
+    "selectors": {
+      ".refentry .refnamediv p": "Module",
+      ".refsect1 h2": [
+        {
+          "requiretext": ".*Section.*",
+          "type": "Section",
+          "attr": "id"
+        }
+      ],
+      ".variablelist dt": "Variable"
+    },
+    "ignore": [
+    ],
+    "icon32x32": "icon32.png",
+    "allowJS": false,
+    "ExternalURL": "https://www.freedesktop.org/software/systemd/man/latest/"
+}
