@@ -1,8 +1,0 @@
-https://api.qunitjs.com/ https://qunitjs.com/cookbook/
-File generated automatically on Fri, 25 Mar 2016 10:30:49, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-

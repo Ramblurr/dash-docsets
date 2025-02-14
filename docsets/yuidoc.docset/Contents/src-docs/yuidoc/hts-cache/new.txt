@@ -1,4 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-10:19:49	48937/48937	---M-Z	200	added ('OK')	text/html	date:Mon,%2018%20Jan%202016%2013:30:10%20GMT	https://yui.github.io/yuidoc/syntax/	yui.github.io/yuidoc/syntax/index.html	(from )
-10:19:49	5310/5310	---M-Z	-1	error ('Open%20error%20when%20decompressing%20(can%20not%20create%20temporary%20file%20/tmp0.z)')	text/html	etag:W/%22569ca514-247c%22	https://yui.github.io/robots.txt		(from )
-10:19:49	48937/48937	---M-Z	200	added ('OK')	text/html	date:Mon,%2018%20Jan%202016%2013:30:10%20GMT	https://yui.github.io/yuidoc/syntax/index.html	yui.github.io/yuidoc/syntax/index-2.html	(from https://yui.github.io/yuidoc/syntax/)
